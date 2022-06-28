@@ -234,7 +234,7 @@ function PairDevicesInner({ navigation, route }: Props) {
         route.params?.onDoneNavigateTo === ScreenName.SyncOnboardingCompanion
       ) {
         // Navigates back to the sync onboarding flow with a paired device
-        navigation.navigate(NavigatorName.SyncOnboarding, {
+        navigation.replace(NavigatorName.SyncOnboarding, {
           screen: ScreenName.SyncOnboardingCompanion,
           params: { pairedDevice: device },
         });
